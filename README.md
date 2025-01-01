@@ -76,7 +76,7 @@ The application follows MVVM (Model-View-ViewModel) architecture pattern with cl
    - Network error handling
 
 ## Project Structure
-
+```
 com.wahid.tawuniya/
 ├── composables/
 │ ├── UserItem.kt # Individual user item UI
@@ -96,7 +96,7 @@ com.wahid.tawuniya/
 ├── viewmodels/
 │ └── UsersViewModel.kt # UI state management
 └── MainActivity.kt # Main entry point
-
+```
 
 
 ## Potential Enhancements
