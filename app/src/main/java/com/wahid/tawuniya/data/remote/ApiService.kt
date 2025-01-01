@@ -1,7 +1,6 @@
-package com.wahid.tawuniya.api
+package com.wahid.tawuniya.data.remote
 
 import com.example.example.User
-import retrofit2.Retrofit
 import retrofit2.http.GET
 
 interface ApiService {

@@ -22,6 +22,7 @@ fun UsersList(
     viewModel: UsersViewModel
 ) {
     val users by viewModel.users.collectAsState()
+    val favoriteUsers by viewModel.favoriteUsers.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
 
@@ -32,6 +33,7 @@ fun UsersList(
                     modifier = Modifier.align(Alignment.Center)
                 )
             }
+
             error != null -> {
                 Text(
                     text = error ?: "",
@@ -41,10 +43,16 @@ fun UsersList(
                         .padding(16.dp)
                 )
             }
+
             else -> {
                 LazyColumn {
                     items(users) { user ->
-                        UserItem(user = user)
+                        UserItem(
+                            user = user,
+                            isFavorite = user in favoriteUsers,
+                            onFavoriteClick = { viewModel.toggleFavorite(it) }
+
+                        )
                     }
                 }
             }

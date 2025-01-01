@@ -1,5 +1,6 @@
-package com.wahid.tawuniya.api
+package com.wahid.tawuniya.di
 
+import com.wahid.tawuniya.data.remote.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
