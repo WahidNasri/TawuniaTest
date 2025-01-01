@@ -1,9 +1,10 @@
 package com.wahid.tawuniya.repositories
 
-import com.wahid.tawuniya.api.ApiClient
+import com.wahid.tawuniya.api.ApiService
+import javax.inject.Inject
 
-class UsersRepository {
-    private val apiService = ApiClient.apiService
-
+class UsersRepository @Inject constructor(
+    private val apiService: ApiService
+) {
     suspend fun getUsers() = apiService.getUsers()
 }

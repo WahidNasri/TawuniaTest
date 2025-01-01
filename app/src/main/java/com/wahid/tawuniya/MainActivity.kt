@@ -12,7 +12,9 @@ import androidx.compose.ui.Modifier
 import com.wahid.tawuniya.composables.UsersList
 import com.wahid.tawuniya.ui.theme.TawuniyaTestAndroidTheme
 import com.wahid.tawuniya.viewmodels.UsersViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel: UsersViewModel by viewModels()
 
